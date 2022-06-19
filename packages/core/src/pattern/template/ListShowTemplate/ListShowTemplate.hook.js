@@ -162,7 +162,7 @@ export function useListShowState() {
       ],
     }
     contextSetNavigationAction(newNavigation)
-    navigate('../info', { replace: true })
+    navigate(process.env.BASE_URL ? `${'..'}${process.env.BASE_URL}${'/info'}` : '../info', { replace: true })
   }
 
   return {
